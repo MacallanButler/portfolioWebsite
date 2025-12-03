@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Projects | Macallan Butler</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<header class="site-header">
+  <nav class="site-nav">
+    <a href="index.html">About</a>
+    <a href="projects.html">Projects</a>
+    <a href="contact.html">Contact</a>
+  </nav>
+</header>
+
+<main class="projects">
+  <h2 class="section-title fade-gradient">My Projects</h2>
+  <p class="section-subtitle fade-gradient fade-gradient-delay">Here are some of the projects I’ve been working on recently.</p>
+
+  <div class="projects-container">
+    <div class="project-main" id="projectMain">
+      <img id="mainProjectImg" src="project1.jpg" alt="Project 1">
+      <p class="project-description fade-gradient" id="mainProjectDesc">Project 1 description goes here.</p>
+    </div>
+
+    <div class="project-list" id="projectList">
+      <div class="project-list-item active" data-index="0">Project 1</div>
+      <div class="project-list-item" data-index="1">Project 2</div>
+      <div class="project-list-item" data-index="2">Project 3</div>
+    </div>
+  </div>
+</main>
+
+<footer class="site-footer">
+  <p>&copy; 2025 Macallan Butler</p>
+</footer>
+
+<script>
+const projects = [
+  { img: "project1.jpg", desc: "Project 1 description goes here." },
+  { img: "project2.jpg", desc: "Project 2 description goes here." },
+  { img: "project3.jpg", desc: "Project 3 description goes here." }
+];
+
+const mainImg = document.getElementById('mainProjectImg');
+const mainDesc = document.getElementById('mainProjectDesc');
+const projectItems = document.querySelectorAll('.project-list-item');
+const projectMain = document.getElementById('projectMain');
+
+let currentIndex = 0;
+
+function showProject(index) {
+  projectMain.style.opacity = 0;
+  setTimeout(() => {
+    mainImg.src = projects[index].img;
+    mainDesc.textContent = projects[index].desc;
+
+    mainDesc.style.opacity = 0;
+    mainDesc.classList.remove('fade-gradient');
+    void mainDesc.offsetWidth;
+    mainDesc.classList.add('fade-gradient');
+
+    projectItems.forEach(item => item.classList.remove('active'));
+    projectItems[index].classList.add('active');
+
+    projectMain.style.opacity = 1;
+    currentIndex = index;
+  }, 300);
+}
+
+projectItems.forEach(item => {
+  item.addEventListener('click', () => {
+    const index = parseInt(item.getAttribute('data-index'));
+    showProject(index);
+  });
+});
+
+// Auto-cycle
+setInterval(() => {
+  const nextIndex = (currentIndex + 1) % projects.length;
+  showProject(nextIndex);
+}, 8000);
+
+// Swipe support
+let touchStartX = 0, touchEndX = 0;
+projectMain.addEventListener('touchstart', e => { touchStartX = e.changedTouches[0].screenX; });
+projectMain.addEventListener('touchend', e => {
+  touchEndX = e.changedTouches[0].screenX;
+  if (touchEndX < touchStartX - 50) showProject((currentIndex + 1) % projects.length);
+  if (touchEndX > touchStartX + 50) showProject((currentIndex - 1 + projects.length) % projects.length);
+});
+</script>
+
+<script src="animations.js"></script>
+</body>
+</html>
