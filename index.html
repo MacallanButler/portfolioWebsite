@@ -1,60 +1,80 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Macallan Butler | Web Designer & Developer Portfolio</title>
-  <meta name="description" content="Portfolio of Macallan Butler, a web designer & developer specializing in UX, SEO, and modern front-end development. View skills, work, results, and contact info." />
-  <meta name="author" content="Macallan Butler" />
-  <meta property="og:title" content="Macallan Butler | Web Designer & Developer Portfolio" />
-  <meta property="og:description" content="Explore the portfolio of Macallan Butler, a web designer & developer focused on UX and SEO." />
-
-  <meta property="og:type" content="website" />
-  <meta property="og:url" content="https://yourdomain.com" />
-  <meta property="og:image" content="https://yourdomain.com/preview.jpg" />
-  <meta property="og:image:alt" content="Preview of Macallan Butler portfolio website" />
-
-  <link rel="icon" href="favicon.ico" type="image/x-icon" />
-
-
-
-  <link rel="stylesheet" href="styles.css" />
-
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "Person",
-    "name": "Macallan Butler",
-    "url": "https://yourwebsite.com",
-    "jobTitle": "Web Designer & UX Enthusiast",
-    "description": "Portfolio of Macallan Butler, showcasing web design and SEO projects.",
-    "sameAs": [
-      "https://www.linkedin.com/in/macallanbutler",
-      "https://github.com/MacallanButler"
-    ]
-  }
-  </script>
-
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Macallan Butler | Digital Business Card</title>
+  <meta name="description" content="Interactive digital business card for Macallan Butler - Web Designer & Developer">
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-
-  <header class="site-header">
-  <nav class="site-nav">
-    <a href="index.html">About</a>
-    <a href="projects.html">Projects</a>
-    <a href="contact.html">Contact</a>
-  </nav>
-</header>
-
-<main class="intro">
-  <h1 class="intro-name fade-gradient">Macallan Butler</h1>
-  <p class="intro-tagline fade-gradient fade-gradient-delay">Designing clean, functional and creative web experiences.</p>
-</main>
-
-<footer class="site-footer">
-  <p>&copy; 2025 Macallan Butler</p>
-</footer>
-
-<script src="animations.js"></script>
+  <div class="card-container">
+    <!-- Pulse indicators -->
+    <div class="pulse-left"></div>
+    <div class="pulse-right"></div>
+    
+    <!-- The Card -->
+    <div class="card" id="businessCard">
+      <!-- FRONT SIDE -->
+      <div class="card-face card-front">
+        <div class="front-content">
+          <h1 class="card-name">Macallan Butler</h1>
+          <p class="card-tagline">Designing clean, functional and creative web experiences.</p>
+        </div>
+      </div>
+      
+      <!-- BACK SIDE -->
+      <div class="card-face card-back">
+        <!-- Left sidebar with menu -->
+        <div class="card-sidebar">
+          <nav class="card-menu">
+            <div class="menu-section">
+              <h3>Projects</h3>
+              <ul class="project-list">
+                <li class="project-item" data-project="1">Project One</li>
+                <li class="project-item" data-project="2">Project Two</li>
+                <li class="project-item" data-project="3">Project Three</li>
+              </ul>
+            </div>
+            <div class="menu-section">
+              <button class="contact-trigger" id="contactBtn">Contact</button>
+            </div>
+          </nav>
+        </div>
+        
+        <!-- Main content area -->
+        <div class="card-content" id="cardContent">
+          <div class="welcome-message">
+            <h2>Welcome to the back of my card!</h2>
+            <p>Select a project to view details, or click Contact to get in touch.</p>
+          </div>
+          
+          <!-- Project Details (hidden by default) -->
+          <div class="project-details" id="projectDetails" style="display: none;">
+            <button class="close-btn" id="closeProject">&times;</button>
+            <img id="projectImage" src="" alt="Project preview">
+            <h2 id="projectTitle"></h2>
+            <p id="projectDescription"></p>
+            <a id="projectLink" href="#" target="_blank" class="project-link">View Project</a>
+          </div>
+          
+          <!-- Contact Form (hidden by default) -->
+          <div class="contact-form-container" id="contactForm" style="display: none;">
+            <button class="close-btn" id="closeContact">&times;</button>
+            <h2>Let's Connect</h2>
+            <form action="https://formspree.io/f/myzpqozk" method="POST" id="contactFormElement">
+              <input type="text" name="name" placeholder="Your Name" required>
+              <input type="email" name="email" placeholder="Your Email" required>
+              <textarea name="message" placeholder="Your Message" rows="5" required></textarea>
+              <button type="submit">Send Message</button>
+            </form>
+            <p id="formMessage" class="form-message"></p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <script src="script.js"></script>
 </body>
 </html>
