@@ -53,8 +53,26 @@ setTimeout(() => {
 let isFlipped = false;
 
 function flipCard(direction) {
-  if (isFlipped) return; // Prevent flipping if already on back
+  if (isFlipped) {
+    // If already flipped (on back), flip back to front
+    card.classList.remove('flip-left', 'flip-right');
+    isFlipped = false;
+    
+    // Reset content
+    projectDetails.style.display = 'none';
+    contactForm.style.display = 'none';
+    welcomeMessage.style.display = 'flex';
+    
+    // Restart pulses after a delay
+    setTimeout(() => {
+      pulseLeft.classList.add('active');
+      pulseRight.classList.add('active');
+    }, 6000);
+    
+    return;
+  }
   
+  // Flip to back
   card.classList.remove('flip-left', 'flip-right');
   
   if (direction === 'left') {
@@ -70,9 +88,12 @@ function flipCard(direction) {
   pulseRight.classList.remove('active');
 }
 
-// Click zones for flipping
+// Click zones for flipping (works on both front and back now)
 card.addEventListener('click', (e) => {
-  if (isFlipped) return; // Only allow flipping on front side
+  // Don't flip if clicking on interactive elements
+  if (e.target.closest('.project-item, .contact-trigger, .close-btn, input, textarea, button[type="submit"], a')) {
+    return;
+  }
   
   const rect = card.getBoundingClientRect();
   const clickX = e.clientX - rect.left;
