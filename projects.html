@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>Projects | Macallan Butler</title>
+  <meta name="description" content="Independent web design and development projects focused on UX, performance, and SEO." />
+
+  <link rel="stylesheet" href="styles/base.css" />
+  <link rel="stylesheet" href="styles/theme.css" />
+  <link rel="stylesheet" href="styles/components.css" />
+</head>
+<body>
+
+  <header class="site-header">
+    <nav class="nav">
+      <a href="index.html" class="logo">Macallan Butler</a>
+
+      <ul class="nav-links">
+        <li><a href="projects.html">Projects</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="resume.html">Resume</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+
+      <button id="themeToggle" aria-label="Toggle theme">🌙</button>
+    </nav>
+  </header>
+
+  <main>
+
+    <section>
+      <h1>Projects</h1>
+      <p>
+        A selection of independent projects focused on UX clarity, technical execution,
+        and search visibility.
+      </p>
+    </section>
+
+    <section class="project-grid">
+
+      <article class="project-card">
+        <h4>Project One</h4>
+        <p>Independent UX-focused web project exploring structure and performance.</p>
+        <span class="tech">HTML · CSS · JavaScript</span>
+        <a href="project-1.html">View Case Study →</a>
+      </article>
+
+      <article class="project-card">
+        <h4>Project Two</h4>
+        <p>Personal project centered on accessibility and responsive design.</p>
+        <span class="tech">HTML · CSS · JS</span>
+        <a href="project-2.html">View Case Study →</a>
+      </article>
+
+      <article class="project-card">
+        <h4>Project Three</h4>
+        <p>SEO-driven build focused on semantic markup and page intent.</p>
+        <span class="tech">HTML · CSS · JavaScript</span>
+        <a href="project-3.html">View Case Study →</a>
+      </article>
+
+    </section>
+
+  </main>
+
+  <footer class="site-footer">
+    <p>© <span id="year"></span> Macallan Butler</p>
+  </footer>
+
+  <script src="js/theme-toggle.js"></script>
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
+
+</body>
+</html>

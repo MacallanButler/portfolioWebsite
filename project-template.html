@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>Project Title | Macallan Butler</title>
+  <meta name="description" content="Case study detailing UX, development, and SEO decisions for Project Title." />
+
+  <link rel="stylesheet" href="styles/base.css" />
+  <link rel="stylesheet" href="styles/theme.css" />
+  <link rel="stylesheet" href="styles/components.css" />
+</head>
+<body>
+
+  <header class="site-header">
+    <nav class="nav">
+      <a href="index.html" class="logo">Macallan Butler</a>
+
+      <ul class="nav-links">
+        <li><a href="projects.html">Projects</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="resume.html">Resume</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+
+      <button id="themeToggle" aria-label="Toggle theme">🌙</button>
+    </nav>
+  </header>
+
+  <main>
+
+    <section>
+      <h1>Project Title</h1>
+      <p>Independent project focused on solving a specific UX and technical problem.</p>
+      <span class="tech">HTML · CSS · JavaScript</span>
+    </section>
+
+    <section>
+      <h3>Overview</h3>
+      <p>
+        Brief summary of what the project is, who it’s for, and why it exists.
+      </p>
+    </section>
+
+    <section>
+      <h3>The Problem</h3>
+      <p>
+        What wasn’t working, missing, or unclear, and why it mattered.
+      </p>
+    </section>
+
+    <section>
+      <h3>My Role</h3>
+      <p>
+        UX design, UI design, development, and SEO strategy.
+      </p>
+    </section>
+
+    <section>
+      <h3>Design & UX Decisions</h3>
+      <p>
+        Key layout, navigation, and accessibility decisions.
+      </p>
+    </section>
+
+    <section>
+      <h3>Technical Implementation</h3>
+      <p>
+        Stack used, challenges faced, and how problems were solved.
+      </p>
+    </section>
+
+    <section>
+      <h3>SEO & AEO Considerations</h3>
+      <p>
+        Semantic HTML, page intent, performance, and content structure decisions.
+      </p>
+    </section>
+
+    <section>
+      <h3>Outcome & Next Steps</h3>
+      <p>
+        Results so far and what you would iterate on next.
+      </p>
+    </section>
+
+  </main>
+
+  <footer class="site-footer">
+    <p>© <span id="year"></span> Macallan Butler</p>
+  </footer>
+
+  <script src="js/theme-toggle.js"></script>
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
+
+</body>
+</html>

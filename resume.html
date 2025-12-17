@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>Resume | Macallan Butler</title>
+  <meta name="description" content="Resume of Macallan Butler, full-stack web designer specializing in UX, UI, SEO, and AEO." />
+
+  <link rel="stylesheet" href="styles/base.css" />
+  <link rel="stylesheet" href="styles/theme.css" />
+  <link rel="stylesheet" href="styles/components.css" />
+</head>
+<body>
+
+  <header class="site-header">
+    <nav class="nav">
+      <a href="index.html" class="logo">Macallan Butler</a>
+
+      <ul class="nav-links">
+        <li><a href="projects.html">Projects</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="resume.html">Resume</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+
+      <button id="themeToggle" aria-label="Toggle theme">🌙</button>
+    </nav>
+  </header>
+
+  <main>
+
+    <section>
+      <h1>Resume</h1>
+      <p>
+        A concise overview of my experience, skills, and background as a full-stack web designer.
+      </p>
+
+      <a
+        href="assets/Macallan-Butler-Resume.pdf"
+        class="btn primary"
+        download
+      >
+        Download PDF
+      </a>
+    </section>
+
+    <section>
+      <iframe
+        src="assets/Macallan-Butler-Resume.pdf"
+        title="Macallan Butler Resume"
+        width="100%"
+        height="900"
+        style="border: 1px solid var(--border); border-radius: 8px;"
+      ></iframe>
+    </section>
+
+  </main>
+
+  <footer class="site-footer">
+    <p>© <span id="year"></span> Macallan Butler</p>
+  </footer>
+
+  <script src="js/theme-toggle.js"></script>
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
+
+</body>
+</html>
