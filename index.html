@@ -1,81 +1,96 @@
-<!DOCTYPE html>
+ <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Macallan Butler | Digital Business Card</title>
-  <meta name="description" content="Interactive digital business card for Macallan Butler - Web Designer & Developer">
-  <link rel="stylesheet" href="styles.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>Macallan Butler | Full-Stack Web Designer</title>
+  <meta name="description" content="Full-stack web designer specializing in UX, UI, SEO, and AEO. Portfolio of independent projects and case studies." />
+
+  <link rel="stylesheet" href="styles/base.css" />
+  <link rel="stylesheet" href="styles/theme.css" />
+  <link rel="stylesheet" href="styles/components.css" />
 </head>
 <body>
-  <div class="card-container">
-    <!-- Pulse indicators -->
-    <div class="pulse-left"></div>
-    <div class="pulse-right"></div>
-    
-    <!-- The Card -->
-    <div class="card" id="businessCard">
-      <!-- FRONT SIDE -->
-      <div class="card-face card-front">
-        <div class="front-content">
-          <h1 class="card-name">Macallan Butler</h1>
-          <p class="card-tagline">Designing clean, functional and creative web experiences.</p>
-        </div>
+
+  <!-- Sticky Navigation -->
+  <header class="site-header">
+    <nav class="nav">
+      <a href="index.html" class="logo">Macallan Butler</a>
+
+      <ul class="nav-links">
+        <li><a href="projects.html">Projects</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="resume.html">Resume</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+
+      <button id="themeToggle" aria-label="Toggle theme">
+        🌙
+      </button>
+    </nav>
+  </header>
+
+  <main>
+
+    <!-- Hero -->
+    <section class="hero">
+      <h1>Macallan Butler</h1>
+      <h2>Full-Stack Web Designer</h2>
+      <p>
+        I design and build user-focused websites with a strong emphasis on UX clarity,
+        SEO, and emerging AEO best practices.
+      </p>
+
+      <div class="hero-actions">
+        <a href="projects.html" class="btn primary">View Projects</a>
+        <a href="resume.html" class="btn secondary">Download Resume</a>
       </div>
-      
-      <!-- BACK SIDE -->
-      <div class="card-face card-back">
-        <!-- Left sidebar with menu -->
-        <div class="card-sidebar">
-          <nav class="card-menu">
-            <div class="menu-section">
-              <h3>Projects</h3>
-              <ul class="project-list">
-                <li class="project-item" data-project="1">Project One</li>
-                <li class="project-item" data-project="2">Project Two</li>
-                <li class="project-item" data-project="3">Project Three</li>
-              </ul>
-            </div>
-            <div class="menu-section">
-              <button class="contact-trigger" id="contactBtn">Contact</button>
-            </div>
-          </nav>
-        </div>
-        
-        <!-- Main content area -->
-        <div class="card-content" id="cardContent">
-          <div class="welcome-message">
-            <h2>Welcome to the back of my card!</h2>
-            <p>Select a project to view details, or click Contact to get in touch.</p>
-          </div>
-          
-          <!-- Project Details (hidden by default) -->
-          <div class="project-details" id="projectDetails" style="display: none;">
-            <button class="close-btn" id="closeProject">&times;</button>
-            <img id="projectImage" src="" alt="Project preview">
-            <h2 id="projectTitle"></h2>
-            <p id="projectDescription"></p>
-            <a id="projectLink" href="#" target="_blank" class="project-link">View Project</a>
-          </div>
-          
-          <!-- Contact Form (hidden by default) -->
-          <div class="contact-form-container" id="contactForm" style="display: none;">
-            <button class="close-btn" id="closeContact">&times;</button>
-            <h2>Let's Connect</h2>
-            <form action="https://formspree.io/f/myzpqozk" method="POST" id="contactFormElement">
-              <input type="text" name="name" placeholder="Your Name" required>
-              <input type="email" name="email" placeholder="Your Email" required>
-              <textarea name="message" placeholder="Your Message" rows="5" required></textarea>
-              <button type="submit">Send Message</button>
-            </form>
-            <p id="formMessage" class="form-message"></p>
-          </div>
-        </div>
+    </section>
+
+    <!-- Featured Projects -->
+    <section class="featured-projects">
+      <h3>Selected Work</h3>
+
+      <div class="project-grid">
+        <!-- Project Card -->
+        <article class="project-card">
+          <h4>Project One</h4>
+          <p>Independent project focused on UX structure and performance.</p>
+          <span class="tech">HTML · CSS · JavaScript</span>
+          <a href="project-1.html">View Case Study →</a>
+        </article>
+
+        <!-- Repeat for 3 projects -->
       </div>
+    </section>
+
+    <!-- Skills -->
+    <section class="skills">
+      <h3>Core Skills</h3>
+      <ul>
+        <li>UX / UI Design</li>
+        <li>Full-Stack Web Development</li>
+        <li>SEO & AEO Optimization</li>
+        <li>Accessibility & Performance</li>
+      </ul>
+    </section>
+
+  </main>
+
+  <footer class="site-footer">
+    <p>© <span id="year"></span> Macallan Butler</p>
+    <div class="footer-links">
+      <a href="mailto:your@email.com">Email</a>
+      <a href="https://linkedin.com/in/yourprofile">LinkedIn</a>
+      <a href="https://github.com/yourusername">GitHub</a>
     </div>
-  </div>
-  
-  <script src="script.js"></script>
+  </footer>
+
+  <script src="js/theme-toggle.js"></script>
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
+
 </body>
 </html>
-

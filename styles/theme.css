@@ -1,0 +1,26 @@
+:root {
+  /* Dark (default) */
+  --bg: #0e0e11;
+  --bg-alt: #15151a;
+  --text: #f2f2f2;
+  --text-muted: #b3b3b3;
+  --border: #26262c;
+  --accent: #7c7cff;
+
+  --card-bg: #16161d;
+  --button-bg: #1f1f2a;
+  --button-hover: #2a2a3a;
+}
+
+[data-theme="light"] {
+  --bg: #ffffff;
+  --bg-alt: #f5f5f7;
+  --text: #111111;
+  --text-muted: #555555;
+  --border: #dddddd;
+  --accent: #4f46e5;
+
+  --card-bg: #ffffff;
+  --button-bg: #f0f0f0;
+  --button-hover: #e5e5e5;
+}
