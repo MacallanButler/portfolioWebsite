@@ -140,9 +140,34 @@
   margin-top: 14rem;
 }
 
+.contact-footer {
+  border-top: 1px solid var(--border);
+  padding: 1rem 1.5rem;
+  text-align: left;
+  margin-top: 22rem;;
+}
+
 .footer-links {
   margin-top: 1rem;
   display: flex;
   gap: 1.5rem;
   justify-content: center;
 }
+
+@media (max-width: 768px) {
+  .nav {
+    flex-wrap: wrap;
+    gap: 1rem;
+  }
+
+  .nav-links {
+    width: 100%;
+    justify-content: center;
+    gap: 1rem;
+  }
+
+  .nav-links a{
+    font-size: 0.9rem;
+  }
+
+  

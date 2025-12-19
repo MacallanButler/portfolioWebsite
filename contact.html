@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>Contact | Macallan Butler, Full-Stack Web Designer</title>
+  <meta name="description" content="Contact Macallan Butler for full-stack web design, UX, UI, and SEO opportunities." />
+
+  <link rel="stylesheet" href="styles/base.css" />
+  <link rel="stylesheet" href="styles/theme.css" />
+  <link rel="stylesheet" href="styles/components.css" />
+</head>
+<body>
+
+  <header class="site-header">
+    <nav class="nav">
+      <a href="index.html" class="logo">Macallan Butler</a>
+
+      <ul class="nav-links">
+        <li><a href="projects.html">Projects</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="resume.html">Resume</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+
+      <button id="themeToggle" aria-label="Toggle theme">🌙</button>
+    </nav>
+  </header>
+
+  <main>
+
+    <section>
+      <h1>Contact</h1>
+      <p>
+        The easiest way to reach me is by email or LinkedIn. I’m always open to discussing new opportunities.
+      </p>
+    </section>
+
+    <section>
+      <ul class="contact-list">
+        <li>
+          <a href="mailto:your@email.com">Email</a>
+        </li>
+        <li>
+          <a href="https://linkedin.com/in/macallanbutler" target="_blank" rel="noopener">
+            LinkedIn
+          </a>
+        </li>
+        <li>
+          <a href="https://github.com/macallanbutler" target="_blank" rel="noopener">
+            GitHub
+          </a>
+        </li>
+      </ul>
+    </section>
+
+  </main>
+
+  <footer class="contact-footer">
+    <p>© <span id="year"></span> Macallan Butler</p>
+  </footer>
+
+  <script src="js/theme-toggle.js"></script>
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
+
+</body>
+</html>
