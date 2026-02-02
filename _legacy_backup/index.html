@@ -1,0 +1,96 @@
+ <!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>Macallan Butler | Full-Stack Web Designer</title>
+  <meta name="description" content="Full-stack web designer specializing in UX, UI, SEO, and AEO. Portfolio of independent projects and case studies." />
+
+  <link rel="stylesheet" href="styles/base.css" />
+  <link rel="stylesheet" href="styles/theme.css" />
+  <link rel="stylesheet" href="styles/components.css" />
+</head>
+<body>
+
+  <!-- Sticky Navigation -->
+  <header class="site-header">
+    <nav class="nav">
+      <a href="index.html" class="logo">Macallan Butler</a>
+
+      <ul class="nav-links">
+        <li><a href="projects.html">Projects</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="resume.html">Resume</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+
+      <button id="themeToggle" aria-label="Toggle theme">
+        🌙
+      </button>
+    </nav>
+  </header>
+
+  <main>
+
+    <!-- Hero -->
+    <section class="hero">
+      <h1>Macallan Butler</h1>
+      <h2>Full-Stack Web Designer</h2>
+      <p>
+        Designing and building user-focused websites with a strong emphasis on UX clarity,
+        SEO, and emerging AEO best practices.
+      </p>
+
+      <div class="hero-actions">
+        <a href="projects.html" class="btn primary">View Projects</a>
+        <a href="resume.html" class="btn secondary">Download Resume</a>
+      </div>
+    </section>
+
+    <!-- Featured Projects -->
+    <section class="featured-projects">
+      <h3>Selected Work</h3>
+
+      <div class="project-grid">
+        <!-- Project Card -->
+        <article class="project-card">
+          <h4>Project One</h4>
+          <p>Independent project focused on UX structure and performance.</p>
+          <span class="tech">HTML · CSS · JavaScript</span>
+          <a href="project-1.html">View Case Study →</a>
+        </article>
+
+        <!-- Repeat for 3 projects -->
+      </div>
+    </section>
+
+    <!-- Skills -->
+    <section class="skills">
+      <h3>Core Skills</h3>
+      <ul>
+        <li>UX / UI Design</li>
+        <li>Full-Stack Web Development</li>
+        <li>SEO & AEO Optimization</li>
+        <li>Accessibility & Performance</li>
+      </ul>
+    </section>
+
+  </main>
+
+  <footer class="site-footer">
+    <p>© <span id="year"></span> Macallan Butler</p>
+    <div class="footer-links">
+      <a href="mailto:macallan.butler@gmail.com">Email</a>
+      <a href="https://linkedin.com/in/macallanbutler">LinkedIn</a>
+      <a href="https://github.com/MacallanButler">GitHub</a>
+    </div>
+  </footer>
+
+  <script src="js/theme-toggle.js"></script>
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
+
+</body>
+</html>
